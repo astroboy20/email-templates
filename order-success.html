@@ -1,27 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body
-    style="
-      background-color: #ffffff;
-      margin: 0 !important;
-      padding: 0 !important;
-      box-sizing: border-box;
-    "
-  >
-    <main
-      style="
-        height: 100vh;
+    <title>Order Success</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+      body {
+        background-color: #ffffff;
+        color:#1C1B1C;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+      }
+      main {
+        margin: 10px 30px;
+        width: auto;
+      }
+      .header {
+        text-align: center;
+        padding: 5px;
+        border-radius: 4px 4px 0px 0px;
+        color: #111111;
+        font-size: 48px;
+        font-weight: 400;
+      }
+      .header img {
+        margin: auto;
+      }
+      .content {
+        color: #111111;
+        padding: 10px 28px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+      .order-summary {
         display: flex;
-        justify-content: center;
         align-items: center;
-      "
-    >
-      <header style="margin: auto; border: 1px solid red">{{logo}}</header>
+        gap: 10px;
+        margin: 0;
+      }
+      .order-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #eaebed;
+        color: #1c1b1c;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .order-table th {
+        text-align: left;
+        padding: 10px;
+        color: #888;
+        font-weight: normal;
+        background: #f6f6f6;
+      }
+      .order-table td {
+        padding: 10px;
+        border: 1px solid #eaebed;
+      }
+      .product-cell {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .product-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+      .quantity-cell,
+      .price-cell {
+        text-align: center;
+      }
+      .total-row td {
+        padding-top: 20px;
+      }
+      .total-label {
+        text-align: right;
+      }
+      .footer {
+        text-align: center;
+        padding: 10px;
+      }
+      .footer img {
+        margin: 5px;
+      }
+      .footer .logo img {
+        width: 130px;
+        height: 40px;
+      }
+      @media screen and (max-width: 800px) {
+        main {
+          margin: 10px 2px;
+        }
+        .content {
+          padding:10px !important;
+        }
+        .content p {
+          font-size: 12px;
+        }
+
+        .footer img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <img src="{{StoreLogo}}" alt="StoreLogo" />
+        <hr style="background-color: #ebeef2" />
+      </div>
+      <div class="content">
+        <p>Hi [{{CustomerName}}],</p>
+        <p>
+          Thank you for shopping with [{{StoreName}}]! Your order has been
+          successfully placed and is now being processed.
+        </p>
+
+        <p style="font-weight: 600; color: #1c1b1c; margin-top: 10px">
+          Order Summary:
+        </p>
+
+        <p>
+          Order Number: <span style="font-weight: 600">{{OrderNumber}}</span>
+        </p>
+
+        <table class="order-table">
+          <thead>
+            <tr>
+              <th>Item(s)</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="product-cell">
+                  <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201000004687-zZQKIyaqlKvoCiPJQ7c4LDc0buCC96.png"
+                    alt="Wireless Mouse"
+                    class="product-image"
+                  />
+                  <div>Wireless Mouse With 2-year Warranty</div>
+                </div>
+              </td>
+              <td class="quantity-cell">1</td>
+              <td class="price-cell">₦23,550</td>
+            </tr>
+            <tr class="total-row">
+              <td class="total-label" colspan="2">Total Amount</td>
+              <td class="price-cell" style="font-weight: 600">₦23,550</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>You’ll receive another update once your order is shipped.</p>
+        <p>
+          For any questions about your order, feel free to reach out to us at
+          {{CustomerSupportEmail}}.
+        </p>
+        <p>Best Regards, <br />{{full_name}}</p>
+      </div>
+      <div class="footer">
+        <hr />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739620043/ycfolor4lwuse2zldh53.png"
+          alt="Instagram"
+        />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739620125/odjo4mr0wbuegme668ox.png"
+          alt="Whatsapp"
+        />
+        <div class="logo">
+          <img
+            src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739619947/doxd7q9gcbbzozh4ism7.png"
+            alt="Powered by Zent"
+          />
+        </div>
+      </div>
     </main>
   </body>
 </html>
