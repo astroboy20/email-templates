@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Order Success</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,16 +28,29 @@
         font-weight: 400;
       }
       .header p {
-        font-size: 20px;
+        font-size: 35px;
         font-weight: bold;
-        padding: 10px 0;
+        padding: 5px 0;
+        text-align: left;
+        color: grey;
+        margin-bottom: 0;
+      }
+      .header hr {
+        margin-top: 15px;
+        padding: 0;
+        border: none;
+        height: 1px;
       }
       .content {
         color: #111111;
-        padding: 10px 28px;
+        padding: 20px 28px 10px;
         font-size: 16px;
         font-weight: 400;
         line-height: 25px;
+        margin: 0 !important;
+      }
+      .content p {
+        margin-top: 0;
       }
       .order-summary {
         display: flex;
@@ -95,22 +107,26 @@
       .footer .store img {
         width: 120px;
         height: 40px;
-        margin-top:20px;
+        margin-top: 20px;
       }
       .footer .logo img {
         width: 130px;
         height: 40px;
-        margin-top:20px;
+        margin-top: 20px;
+      }
+      hr {
+        background-color: grey !important;
       }
       @media screen and (max-width: 800px) {
         main {
           margin: 10px 2px;
         }
         .content {
-          padding: 10px !important;
+          padding: 0 10px !important;
+          margin: 0 !important;
         }
         .content p {
-          font-size: 12px;
+          font-size: 14px;
         }
 
         .footer img {
@@ -123,29 +139,29 @@
   <body>
     <main>
       <div class="header">
-        <p>Zent fot Business</p>
-        <hr style="background-color: #ebeef2" />
+        <p>Zent for Business</p>
+        <hr style="background-color: grey" />
       </div>
       <div class="content">
         <p>Hi [{{VendorName}}],</p>
-        <p>We’ve received your payment for [{{BillingPeriod}}]. Thank you for staying current with your account.</p>
+        <p>
+          We’ve received your payment for [{{BillingPeriod}}]. Thank you for
+          staying current with your account.
+        </p>
 
         <p style="font-weight: 600; color: #1c1b1c; margin-top: 10px">
           Payment Details:
         </p>
 
+        <p>Amount Paid: <span style="font-weight: 600">{{AmountPaid}}</span></p>
         <p>
-         Amount Paid: <span style="font-weight: 600">{{AmountPaid}}</span>
-        </p>
-        <p>
-          Payment Date: : <span style="font-weight: 600">{{PaymentDate}}</span>
+          Payment Date: <span style="font-weight: 600">{{PaymentDate}}</span>
         </p>
 
-        
         <p>
           If you have any questions, contact us at [{{VendorSupportEmail}}].
         </p>
-        
+
         <p>The Zent Team</p>
       </div>
       <div class="footer">
@@ -195,12 +211,22 @@
           />
         </div>
         <p
-          style="margin-top: 30px; margin: bottom 30px; font-size: 12px; color:#9A9EA6;"
+          style="
+            margin-top: 30px;
+            margin: bottom 30px;
+            font-size: 12px;
+            color: #9a9ea6;
+          "
         >
           You are receiving this because you are a user of Zent
         </p>
         <p
-          style="margin-top: 30px; margin: bottom 30px; font-size: 12px; color:#9A9EA6;"
+          style="
+            margin-top: 30px;
+            margin: bottom 30px;
+            font-size: 12px;
+            color: #9a9ea6;
+          "
         >
           © 2025 Zent Technologies Ltd All Rights Reserved
         </p>
