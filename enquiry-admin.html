@@ -27,13 +27,19 @@
         font-size: 48px;
         font-weight: 400;
       }
-      .header img {
-        margin: auto;
+      .header p {
+        font-size: 35px;
+        font-weight: bold;
+        padding: 5px 0;
+        text-align: left;
+        color: grey;
+        margin-bottom: 0;
       }
       .header hr {
         margin-top: 15px;
         padding: 0;
         border: none;
+        
       }
       .content {
         color: #111111;
@@ -45,6 +51,10 @@
       }
       .content p {
         margin-top: 0;
+      }
+      .content ul li{
+        font-size: 16px;
+        font-weight: 400;
       }
       .order-summary {
         display: flex;
@@ -97,15 +107,21 @@
       }
       .footer img {
         margin: 5px;
-        width: 24px;
-        height: 24px;
+        width:24px;
+        height:24px;
+      }
+      .footer .store img {
+        width: 120px;
+        height: 40px;
+        margin-top: 20px;
       }
       .footer .logo img {
         width: 130px;
         height: 40px;
+        margin-top: 20px;
       }
-      hr {
-        background-color: #eaebed !important;
+        hr {
+        background-color:#EAEBED !important;  
         height: 1px !important;
         padding: 0 !important;
         border: none !important;
@@ -120,7 +136,9 @@
         .content p {
           font-size: 14px;
         }
-
+        .content ul li{
+            font-size: 14px;
+          }
         .footer img {
           width: 24px;
           height: 24px;
@@ -131,64 +149,26 @@
   <body>
     <main>
       <div class="header">
-        <img
-          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739620143/ogcy8r7er1lmkt10lyfd.png"
-          alt="StoreLogo"
-        />
-        <hr />
+        <p>Zent for Business</p>
+        <hr style="background-color: #ebeef2" />
       </div>
       <div class="content">
-        <p>Hi [{{CustomerName}}],</p>
-        <p>
-          Thank you for shopping with [{{StoreName}}]! Your order has been
-          successfully placed and is now being processed.
+        <p>Name: John Doe</p>
+        <p>Email: johndoee@gmail.com</p>
+        <p style="margin-top:20px;">
+          Message:
         </p>
+        <p style="font-weight:500; margin-top:30px;">
+          Hi there, I hope this message finds you well. I'm interested in learning more about your services and would love to discuss how we can work together. 
+          </p>
 
-        <p style="font-weight: 600; color: #1c1b1c; margin-top: 10px">
-          Order Summary:
-        </p>
+<p style="font-weight:500; margin-top:30px;">Please let me know a convenient time for us to chat. Looking forward to hearing from you soon!</p>
 
-        <p>
-          Order Number: <span style="font-weight: 600">{{OrderNumber}}</span>
-        </p>
-
-        <table class="order-table">
-          <thead>
-            <tr>
-              <th>Item(s)</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="product-cell">
-                  <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%201000004687-zZQKIyaqlKvoCiPJQ7c4LDc0buCC96.png"
-                    alt="Wireless Mouse"
-                    class="product-image"
-                  />
-                  <div>Wireless Mouse With 2-year Warranty</div>
-                </div>
-              </td>
-              <td class="quantity-cell">1</td>
-              <td class="price-cell">₦23,550</td>
-            </tr>
-            <tr class="total-row">
-              <td class="total-label" colspan="2">Total Amount</td>
-              <td class="price-cell" style="font-weight: 600">₦23,550</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>You’ll receive another update once your order is shipped.</p>
-        <p>
-          For any questions about your order, feel free to reach out to us at
-          [{{CustomerSupportEmail}}].
-        </p>
-        <p>Best Regards, <br />{{full_name}}</p>
+ <p style="font-weight:500; margin-top:30px;">Kind Regards,<br/>John Doe </p>
+        
+       
       </div>
-      <div class="footer">
+       <div class="footer">
         <hr />
         <img
           src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801179/email-icons/wa0gauwadwrexijah6rk.png"
