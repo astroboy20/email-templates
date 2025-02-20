@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+      body {
+        background-color: #ffffff;
+        color: #1c1b1c;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+      }
+      main {
+        margin: 10px 30px;
+        width: auto;
+      }
+      .header {
+        text-align: center;
+        padding: 5px;
+        border-radius: 4px 4px 0px 0px;
+        color: #111111;
+        font-size: 48px;
+        font-weight: 400;
+      }
+      .header p {
+        font-size: 35px;
+        font-weight: bold;
+        padding: 5px 0;
+        text-align: left;
+        color: grey;
+        margin-bottom: 0;
+      }
+      .header hr {
+        margin-top: 15px;
+        padding: 0;
+        border: none;
+      }
+      .content {
+        color: #111111;
+        padding: 20px 28px 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        margin: 0 !important;
+      }
+      .content p {
+        margin-top: 0;
+      }
+      .content ul li {
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .order-summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+      }
+      .order-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #eaebed;
+        color: #1c1b1c;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .order-table th {
+        text-align: left;
+        padding: 10px;
+        color: #888;
+        font-weight: normal;
+        background: #f6f6f6;
+      }
+      .order-table td {
+        padding: 10px;
+        border: 1px solid #eaebed;
+      }
+      .product-cell {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .product-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+      .quantity-cell,
+      .price-cell {
+        text-align: center;
+      }
+      .total-row td {
+        padding-top: 20px;
+      }
+      .total-label {
+        text-align: right;
+      }
+      .footer {
+        text-align: center;
+        padding: 10px;
+      }
+      .footer img {
+        margin: 5px;
+        width: 24px;
+        height: 24px;
+      }
+      .footer .store img {
+        width: 120px;
+        height: 40px;
+        margin-top: 20px;
+      }
+      .footer .logo img {
+        width: 130px;
+        height: 40px;
+        margin-top: 20px;
+      }
+      hr {
+        background-color: #eaebed !important;
+        height: 1px !important;
+        padding: 0 !important;
+        border: none !important;
+      }
+      @media screen and (max-width: 800px) {
+        main {
+          margin: 10px 2px;
+        }
+        .content {
+          padding: 10px !important;
+        }
+        .content p {
+          font-size: 14px;
+        }
+        .content ul li {
+          font-size: 14px !important;
+        }
+        .footer img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <p>Zent for Business</p>
+        <hr style= />
+      </div>
+      <div class="content">
+        <p>Hi [{{VendorName}}],</p>
+        <p>
+          You’ve successfully switched from
+          <span style="font-weight: 700">{{PayPerOrder}}</span> to
+          <span style="font-weight: 700">{{SubscriptionPlan}}</span> on Zent.
+        </p>
+        <p>
+          Your new plan is now active, and here’s what to expect:<br />
+          <span style="font-weight: 700"> • Subscription Plan</span>: Fixed
+          monthly/yearly fee with unlimited offline sales recording and extra
+          benefits.
+        </p>
+        <p>
+          You can switch between plans anytime from your Billing Settings to
+          choose what works best for your business.
+        </p>
+        <a
+          href=""
+          style="
+            margin-top: 20px;
+            font-size: 16px;
+            color: #4a62ff;
+            text-decoration: underline;
+            font-weight: 700;
+          "
+          >Manage Your Plan</a
+        >
+
+        <p style="padding-top: 20px">
+          Need assistance? contact us at
+          <span style="text-decoration: underline"> hello@zentstores.com</span>
+        </p>
+
+        <p>The Zent Team</p>
+      </div>
+      <div class="footer">
+        <hr style="margin-top: 10px; margin-bottom: 10px" />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801177/email-icons/krpmk4tqm5wt0rafrgmu.png"
+          alt="fb"
+        />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801177/email-icons/y83nviunka1ay2kkbe7t.png"
+          alt="indeed"
+        />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801177/email-icons/qf0kougrvqmcducdlnlm.png"
+          alt="instagram"
+        />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801179/email-icons/m3rckgjfawbs3bhmxpuk.png"
+          alt="pintrest"
+        />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801179/email-icons/f9mp9bh41o4dgnkxgorf.png"
+          alt="x"
+        />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801179/email-icons/eg6vfxohio59vvupt58n.png"
+          alt="youtube"
+        />
+        <img
+          src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801179/email-icons/t2o4waqnct6ud7lpnh2h.png"
+          alt="tiktok"
+        />
+        <div class="store">
+          <img
+            src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801181/email-icons/l5cxr5f3unpi8iridgrq.png"
+            alt="app-store"
+          />
+          <img
+            src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801177/email-icons/cxnytpgm4rk6niz6nayi.png"
+            alt="play-store"
+          />
+        </div>
+        <div class="logo">
+          <img
+            src="https://res.cloudinary.com/dm42ixhsz/image/upload/v1739801182/email-icons/nmr3tphwzsazpclofvhs.png"
+            alt="Powered by Zent"
+          />
+        </div>
+        <p
+          style="
+            margin-top: 30px;
+            margin: bottom 30px;
+            font-size: 12px;
+            color: #9a9ea6;
+          "
+        >
+          You are receiving this because you are a user of Zent
+        </p>
+        <p
+          style="
+            margin-top: 30px;
+            margin: bottom 30px;
+            font-size: 12px;
+            color: #9a9ea6;
+          "
+        >
+          © 2025 Zent Technologies Ltd All Rights Reserved
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
